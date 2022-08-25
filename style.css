@@ -1,0 +1,388 @@
+* {
+    box-sizing: border-box
+}
+body, html {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+#header{
+    position: relative;
+    bottom: 0px;
+    height: 12%;
+    text-align: center;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+#header h1 {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    color: firebrick;
+    font-family: Lora;
+}
+hr{
+    border: 0;
+    clear:both;
+    display:block;
+    width: 96%;               
+    background-color: black;
+    height: 1px;
+    margin-bottom: 20px;
+}
+/*fonts*/
+    @font-face {font-family: Roboto; src: url('fonts/Roboto-Bold.ttf');} 
+    @font-face {font-family: Lobster; src: url('fonts/Lobster-Regular.ttf');}
+    @font-face {font-family: Nunito; src: url('fonts/Nunito-VariableFont_wght.ttf');}  
+    @font-face {font-family: Lora; src: url('fonts/Lora-VariableFont_wght.ttf');} 
+/*tabs*/
+.tab {
+    display: relative;
+    bottom: 12%;
+    overflow: hidden;
+    background-color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.tab button {
+    font-size: calc(0.5rem + 0.4vw);
+    font-family: Roboto;
+    color: #333333;
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+.tab button:hover {
+    color: firebrick;
+}
+.tab button.active {
+    color: firebrick;
+}
+.tabcontent {
+    background-color: white;
+    display: none;
+    padding: 5px;
+    border-top: none;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+/*home*/
+    /*intro*/
+#Home h2{
+    color: #002B5B;
+}
+#homeIntro{
+    text-align: center;
+}
+#homeIntroContent_h1{
+    position: relative;
+    bottom: 13px;
+}
+#homeIntro .homeIntroContent{
+    display: inline-block;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+#homeIntro h1{
+    color: #002B5B;
+    font-size: calc(0.7rem + 1vw); 
+    font-family: Lora;
+}
+#homeIntro p{
+    font-family: Nunito;
+    font-size: calc(0.7rem + 0.3vw); 
+}
+    /*contact*/
+#homeContact{
+    text-align: center;
+    font-family: Nunito;
+}
+#homeContactInfo{
+    padding: 0px;
+    margin: auto;
+    width: 60%;
+    border: 13px firebrick solid;
+    width: 350px;
+}
+    /*menu*/
+#homeMenu{
+    text-align: center;
+    font-family: Nunito;
+}
+#homeMenuTabs{
+    background-color: white !important;
+    box-shadow: none !important;
+}
+#homeMenuTabs button{
+    width: 300px;
+    height: 300px;
+    color:white;
+    font-size: calc(0.7rem + 0.5vw);
+    -webkit-text-stroke: 0.5px black;
+    margin: 10px 10px;
+    border: black 1px solid;
+    border-radius: 5px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+#imageMenuTabs1{
+    background: url(/images/comboTab.jpg) !important;
+}
+#imageMenuTabs2{
+    background: url(/images/americantab.jpg) !important;
+}
+#imageMenuTabs3{
+    background: url(/images/appTab.jpg) !important;
+}
+#imageMenuTabs4{
+    background: url(/images/specialTab.jpg) !important;
+}
+    /*review*/
+#homeReviews{
+    font-family: Nunito;
+    text-align: center;
+}
+.homeReview{
+    position: relative;
+    left: 0%;
+    display: inline-block;
+    margin: 7px 7px;
+    background-color: #f1f1f1;
+    width: 23%;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    height: 250px;
+}
+@media screen and (max-width: 500px) {
+    #homeIntro .homeIntroContent{
+        display: block;
+        margin: 10px;
+    }
+    /*menu resize*/
+    #homeMenuTabs button {
+        display: block;
+        background-color: inherit;
+        padding: 22px 16px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    #homeMenuTabs {
+        position: relative;
+        left: 58%;
+        transform: translateX(-50%);        
+        display: block !important;
+    }
+    /*review resize*/
+    .homeReview{
+        margin: auto;
+        width: 50%;
+        width: 75%;
+        display: block;
+    }
+}
+/*contact*/
+#Contact{
+    text-align: center;
+    font-family: Nunito;
+}
+#Contact #contactTitle{
+    font-family: Lora;
+    color: #002B5B
+}
+#contactHours, #contactMapAndOthers{
+    display: inline-block;
+}
+#contactHours{
+    margin-left: 7%;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-130%);
+}
+#contactMapAndOthers{
+    margin-left: 24%;
+}
+#GoogleMap{
+    width: 500px;
+    height: 375px;
+    border: 0;
+}
+.fa {
+    padding: 20px;
+    font-size: 50px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+}
+.fa:hover {
+    opacity: 0.7;
+}
+.vl {
+    border-left: 1px solid black;
+    height: 550px;
+    position: absolute;
+    left: 50%;
+    margin-left: -3px;
+    top: 320px;
+}
+@media screen and (max-width: 800px) {
+    #contactHours{
+        margin-left: 0%;
+        top: 0%;
+        -ms-transform: translateY(0%);
+        transform: translateY(0%);
+    }
+    #contactMapAndOthers{
+        margin-left: 0%;
+    }
+    #GoogleMap{
+        width: 375px;
+        height: 281px;
+    }
+    #contactMapAndOthers{
+        text-align: center;
+        float: none;
+        margin-right: 0;
+
+    }
+    .vl{
+        border: none ;
+    }
+}
+/*Menu*/
+    /*Menu Tabs*/
+/* Style the tab */
+#Menu h2{
+    font-family: Nunito;
+    padding-left: 11%;
+    font-size: calc(0.8rem + 0.5vw);
+}
+#menuTitle{
+    font-size: calc(1rem + 0.7vw) !important;
+    padding: 10px !important;
+    text-align: center !important;
+}
+.tabMenu {
+    float: left;
+    background-color: #f1f1f1;
+    width: 29%;
+    height: 135%;
+    margin: 0;
+    padding: 0;
+    margin-top: -10px !important;
+    border-radius: 5px;
+}
+.tabMenu button {
+    text-align: left;
+    margin-left: 20px;
+    font-size: calc(0.2rem + 0.4vw);
+    font-family: Roboto;
+    color: #333333;
+    display: block;
+    background-color: inherit;
+    padding: 16px 8px;
+    width: 85%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 14px;
+    border-radius: 5px;
+}
+#defaultOpenMenu{
+    margin-top: 20px;
+}
+.tabMenu button:hover {
+    color: firebrick;
+}
+.tabMenu button.active {
+    color: firebrick;
+
+}
+.tabcontentMenu {
+    float: left;
+    width: 71%;
+    height: 140%;
+    margin: 0;
+    padding: 0;
+}
+.tabcontentMenu table{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+}
+tr {
+    border-bottom: 1px solid #ddd;
+}
+th{
+    font-family: Roboto !important;
+}
+th, td {
+    text-align: center;
+    font-size:calc(0.4rem + 0.6vw);
+    padding: 10px;
+    font-family: Nunito;
+}
+.tabcontentMenu h3{
+    text-align: center;
+    font-family: Nunito;
+    font-weight: bold;
+}
+/*Gallery*/
+#Gallery{
+    text-align: center;
+    font-family: Nunito;
+}
+#galleryTabs{
+    background-color: white !important;
+    box-shadow: none;
+}
+#Gallery img{
+    width: 100%;
+    height: 18%;
+    border: black solid 1px;
+}
+#Gallery p{
+    text-align: center;
+    font-family: Nunito;
+}
+.galleryInline{
+    display: inline-block;
+    width: 18%;
+    margin: 10px;
+}
+#gallerySeclection1{
+    text-align: center;
+}
+#gallerySeclection2{
+    text-align: center;
+}
+#gallerySeclection3{
+    text-align: center;
+}
+/*review*/
+#Reviews{
+    font-family: Nunito;
+    text-align: center;
+}
+/*aboutus*/
+#About{
+    text-align: center;
+    font-family: Nunito;
+}
+#About img{
+    border: firebrick 7px solid;
+}
